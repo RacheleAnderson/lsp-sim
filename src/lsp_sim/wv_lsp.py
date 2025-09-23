@@ -1,12 +1,12 @@
 import numpy as np
 
-def wvshifted_lsp(noise_level, a_q, b_q, c_q, c_r, dataN, f0, fs, nfft):
+def wvshifted_lsp(L, a_q, b_q, c_q, c_r, dataN, f0, fs, nfft):
     """
     Compute Wigner-Ville spectrum and shift it to f0 centre frequency.
 
     Parameters
     ----------
-    noise_level : float
+    L : float
         Baseline noise level.
     a_q, b_q, c_q : floats
         Parameters of q(x).
@@ -45,17 +45,17 @@ def wvshifted_lsp(noise_level, a_q, b_q, c_q, c_r, dataN, f0, fs, nfft):
     Fr = 2 * np.sqrt(2*np.pi / c_r) * np.exp(-(2/c_r) * theta**2)  # [nfft,1]
 
     # q(x)
-    q = noise_level + a_q * np.exp(-c_q/2 * (tau - b_q)**2)        # [1,dataN]
+    q = L + a_q * np.exp(-c_q/2 * (tau - b_q)**2)        # [1,dataN]
 
     # Wigner-Ville spectrum
     WV0 = Fr @ q   # matrix multiply → shape (nfft,dataN)
 
     # shift WV to match frequency in the signal
     d = f0 / fs
-    L = int(np.floor(d * nfft))   # centre freq row
+    m = int(np.floor(d * nfft))   # centre freq row
 
-    start = nfft//2 - L
-    stop = nfft//2 + (nfft//2 - L)
+    start = nfft//2 - m
+    stop = nfft//2 + (nfft//2 - m)
     WVshift = WV0[start:start + nfft//2, :]  # shape (nfft/2,dataN)
 
     # outputs
