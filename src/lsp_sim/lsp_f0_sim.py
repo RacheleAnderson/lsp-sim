@@ -8,7 +8,7 @@ def lsp_f0_sim(
     b_q: float,
     c_q: float,
     c_r: float,
-    sigma_square: float,
+    L: float,
     N: int,
     time: np.ndarray
 ):
@@ -20,7 +20,7 @@ def lsp_f0_sim(
     num_sim : int         Number of simulated trajectories
     f0 : float            Centre frequency
     a_q, b_q, c_q, c_r : float   Model parameters
-    sigma_square : float  Constant noise level
+    L : float  Constant noise level
     N : int               Length of each trajectory
     time : array_like     Time vector of length N
 
@@ -42,7 +42,7 @@ def lsp_f0_sim(
 
     R = np.exp(-(c_r / 8.0) * (tau_R ** 2))
     R_freq = R * np.cos(2 * np.pi * f0 * tau_R)
-    Q = sigma_square + a_q * np.exp(-(c_q / 2.0) * ((tau_Q - b_q) ** 2))
+    Q = L + a_q * np.exp(-(c_q / 2.0) * ((tau_Q - b_q) ** 2))
 
     C = R * Q
     C_freq = R_freq * Q
