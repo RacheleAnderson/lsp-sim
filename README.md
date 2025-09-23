@@ -10,8 +10,8 @@ It includes the function `lsp_f0_sim` for generating realizations with time-vary
 
 ## Features
 - Simulate multiple realizations of an LSP.  
-- Flexible covariance structure: stationary correlation part $R(\tau)$ and time-varying power part $Q(\eta)$.  
-- In this implementation, $Q(\eta)$ and $R(\tau)$ are  chosen as Gaussian functions.  
+- Flexible covariance structure: stationary correlation part $r(\tau)$ and time-varying power part $q(\eta)$.  
+- In this implementation, $q(\eta)$ and $r(\tau)$ are chosen as Gaussian functions.  
 - Jupyter notebook demo included for exploring parameter effects.  
 - Reproducible simulations using fixed random seeds.  
 
@@ -40,15 +40,15 @@ The demo visualizes:
 
 - Several simulated realizations
 - Covariance matrices for different parameter configurations
-- Different behaviors of the realizations when changing the parameters of the chosen Gaussian-shaped $Q(\eta)$ and $R(\tau)$ functions
+- Different behaviors of the realizations when changing the parameters of the chosen Gaussian-shaped $q(\eta)$ and $r(\tau)$ functions
 
 ## Background 
 
 The model is presented in the research paper
 
-Anderson R., Sandsten M., "Inference for time-varying signals using Locally Stationary Processes", Journal of Computational and Applied Mathematics, Volume 347, Pages 24-35, 2019.
+Anderson, R., Sandsten, M. Time-frequency feature extraction for classification of episodic memory. EURASIP J. Adv. Signal Process. 2020, 19 (2020).
 
-available online at: https://doi.org/10.1016/j.cam.2018.07.046
+available online (Open Access) at: https://doi.org/10.1186/s13634-020-00681-8
 
 ## License  
 MIT License — see [LICENSE](LICENSE) for details.
