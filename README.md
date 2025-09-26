@@ -5,8 +5,11 @@
 This package provides tools to simulate *locally stationary processes (LSPs)* in Silverman’s sense with a flexible covariance structure: stationary correlation part $r(\tau)$ and time-varying power part $q(\eta)$, both chosen as Gaussian functions. 
 
 It includes the functions:
+
 -`lsp_f0_sim` for simulating LSP realizations
+
 -`wv_lsp` for calculating the Wigner-Ville distribution of the LSP
+
 
 A simple Jupyter notebook demo `demo_lsp_sim.ipynb` is included for exploring parameter effects.  Reproducible simulations can be obtained by fixing random seeds.  
 
