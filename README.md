@@ -21,7 +21,7 @@ Clone the repository and install
 ```bash
 git clone https://github.com/RacheleAnderson/lsp-sim.git
 cd lsp-sim
-uv pip install -e .
+uv sync
 ```
 ---
 
