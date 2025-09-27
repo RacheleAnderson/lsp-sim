@@ -13,7 +13,8 @@ It includes the functions:
 
 ## Jupyter Demo
 
-Use the simple Jupyter notebook demo `demo_lsp_sim.ipynb` for exploring parameter effects.  
+Use the simple Jupyter notebook demo `demo_lsp_sim.ipynb` https://github.com/RacheleAnderson/lsp-sim/blob/main/notebooks/demo_lsp_sim.ipynb
+for exploring parameter effects.  
 Reproducible simulations can be obtained by fixing random seeds.  
 Full source code and notebook demo are available on GitHub https://github.com/RacheleAnderson/lsp-sim/
 
