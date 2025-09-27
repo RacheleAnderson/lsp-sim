@@ -11,27 +11,11 @@ It includes the functions:
 -`wv_lsp` for calculating the Wigner-Ville distribution of the LSP
 
 
-A simple Jupyter notebook demo `demo_lsp_sim.ipynb` is included for exploring parameter effects.  Reproducible simulations can be obtained by fixing random seeds.  
-
-
-## Installation
-
-Clone the repository and install
-
-```bash
-git clone https://github.com/RacheleAnderson/lsp-sim.git
-cd lsp-sim
-uv pip install -e .
-```
----
-
 ## Jupyter Demo
 
-Launch the included notebook to see comparisons across parameter sets:
-
-```bash
-uv run jupyter notebook notebooks/demo_lsp_sim.ipynb
-```
+Use the simple Jupyter notebook demo `demo_lsp_sim.ipynb` for exploring parameter effects.  
+Reproducible simulations can be obtained by fixing random seeds.  
+Full source code and notebook demo are available on GitHub https://github.com/RacheleAnderson/lsp-sim/
 
 The demo visualizes:
 
@@ -47,7 +31,9 @@ Anderson, R., Sandsten, M. Time-frequency feature extraction for classification 
 
 available online (Open Access) at: https://doi.org/10.1186/s13634-020-00681-8
 
-Matlab code is available for repeating the study, see https://github.com/RacheleAnderson/lsp-time-frequency. This Python package is a simple version with the limited scope of simulating LSP realizations according to the model.  
+Previous Matlab code is available for repeating the study, see https://github.com/RacheleAnderson/lsp-time-frequency. 
+
+This Python package is a simpler version with the limited scope of simulating LSP realizations according to the model.  
 
 ## License  
 MIT License — see [LICENSE](LICENSE) for details.

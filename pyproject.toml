@@ -1,14 +1,19 @@
 [project]
 name = "lsp-sim"
-version = "0.1.0"
+version = "0.1.1"
 description = "Locally stationary process simulation"
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
-    "jupyter>=1.1.1",
-    "matplotlib>=3.10.6",
     "numpy>=2.3.3",
     "scipy>=1.16.2",
+]
+
+[project.optional-dependencies]
+dev = [
+    "jupyter>=1.1.1",
+    "matplotlib>=3.10.6",
+    "pytest",
 ]
 
 [tool.setuptools.packages.find]

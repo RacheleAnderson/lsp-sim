@@ -1,0 +1,17 @@
+# Always include these
+include README.md
+include LICENSE
+
+# Exclude unwanted stuff
+exclude .gitignore
+exclude *.yml
+exclude *.yaml
+
+# Exclude folders that should not go into the PyPI package
+prune .idea
+prune .venv
+prune notebooks
+prune tests/__pycache__
+
+# Exclude common clutter
+global-exclude *.pyc *.pyo __pycache__ *.so
